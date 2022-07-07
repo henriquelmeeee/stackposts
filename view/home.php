@@ -1,16 +1,29 @@
 <?php
 
-$title=__("Livro de visitas", false);
-$data=[
-    'title'=>$title
-];
 view('inc/head', $data);
-print '<h1>'.$title.'</h1>';
+
+?>
+
+
+
+
+    <div id="menu" class="text-center">
+        <h1>StackPosts</h1>
+        <?php
 print '<a href="?random">'.__('Aleatório',false).'</a>';
+
+        ?>
+    </div>
+    <div id="write" class="text-center">
+<?php
 view('form/message');
+?>
+    </div>
+<?php
 if ($message) {
     print '<hr><p>'.e($message['message'],false).'</p>';
     $href='/messages/'.$message['id'];
     print '<a href="'.$href.'">';
     print '<small>'.date('r', $message['created_at']).'</small></a>';
 }
+?>
