@@ -14,11 +14,11 @@ view('inc/head', $data);
 <?php
 view('form/message');
 ?><br>
-<a  class="btn btn-primary" href="?random">Aleatório <i class="fas fa-external-link-alt"></i></a>
+<a  class="btn btn-primary" href="?random">Aleatório <i class="fas fa-external-link-alt"></i></a> <button class="transparentButton"><i class='fas fa-redo-alt' style='font-size: 25px;'></i></button>
 
 <?php
 if ($message) {
-    print '<p class="texto25">'.e($message['message'],false).'</p>';
+    print '<p id="content" =>'.e($message['message'],false).'</p>';
     $href='/messages/'.$message['id'];
     print '<a href="'.$href.'">';
     print '<small>'.date('r', $message['created_at']).'</small></a>';
