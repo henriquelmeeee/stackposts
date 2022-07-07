@@ -5,11 +5,18 @@ class Home
     public function get()
     {
         $where=[
-            'ORDER'=>['created_at'=>'DESC']
+            'ORDER'=>['created_at'=>'DESC'],
+            'LIMIT'=>1,
+            'id[>]'=>0
         ];
-        $message=db()->get('messages', '*', $where);
+        $db=db();
+        if(isset($_GET['random'])){
+            $message=$db->rand('messages', '*', $where);   
+        }else{
+            $message=$db->select('messages', '*', $where);
+        }
         $data=[
-            'message'=>$message
+            'message'=>$message[0]
         ];
         view("home", $data);
     }

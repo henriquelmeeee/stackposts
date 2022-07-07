@@ -6,6 +6,7 @@ $data=[
 ];
 view('inc/head', $data);
 print '<h1>'.$title.'</h1>';
+print '<a href="?random">'.__('Aleatório',false).'</a>';
 view('form/message');
 if ($message) {
     print '<hr><p>'.e($message['message'],false).'</p>';
