@@ -32,6 +32,9 @@ input {
     float: none;
 
 }
+.texto25{
+	font-size:25px;
+}
 
 </style>
 <body class="bg-dark text-white">
