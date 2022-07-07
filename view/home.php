@@ -14,7 +14,7 @@ view('inc/head', $data);
 <?php
 view('form/message');
 ?><br>
-<a  class="btn btn-primary" href="?random">Aleatório <i class="fas fa-external-link-alt"></i></a> <button class="transparentButton"><i class='fas fa-redo-alt' style='font-size: 25px;'></i></button>
+<a  class="btn btn-primary" href="?random">Aleatório <i class="fas fa-external-link-alt"></i></a> <button class="transparentButton" onclick="document.location='?random'"><i class='fas fa-redo-alt' style='font-size: 25px;'></i></button>
 
 <?php
 if ($message) {
