@@ -15,22 +15,25 @@
 <style>
 
 a {
-
     text-decoration: none;
-
 }
 
 #menu {
-
     margin-top: 15px;
-
 }
 
 input {
-
     margin: 0 auto;
     float: none;
+}
 
+#lastPost .transparentButton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
 
 </style>
@@ -42,6 +45,14 @@ input {
         <input class="form-control form-control-sm" style="width: 210px; height: 37px; text-align: center;" type="text" placeholder="Escreva sua postagem">
         <br>
         <button type="button" class="btn btn-success" style="margin-top: -15px;">Enviar postagem</button>
+    </div>
+    <br><br>
+    <div id="lastPost" style="margin-left: 16%;">
+        <button class="btn btn-primary" type="submit">Abrir postagem aleatória <i class="fas fa-external-link-alt"></i></button>
+        <button class="transparentButton"><i class='fas fa-redo-alt' style='font-size: 25px;'></i></button>
+        <div id="content" style="font-size: 25px; margin-top: 15px;">
+            "post aleatorio font size 25px pq tem poucos caracteres"
+        </div>
     </div>
 </body>
 </html>
