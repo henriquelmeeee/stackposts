@@ -4,17 +4,17 @@ class Messages
 {
     public function get()
     {
-        $messageId=segment(2);
-        $where=[
-            'id'=>$messageId
-        ];
-        $message=db()->get('messages', '*', $where);
-        if($message){
-            $data=[
-                'message'=>$message
-            ];
-            view('message', $data);
-        }
+        // $messageId=segment(2);
+        // $where=[
+        //     'id'=>$messageId
+        // ];
+        // $message=db()->get('messages', '*', $where);
+        // if($message){
+        //     $data=[
+        //         'message'=>$message
+        //     ];
+        //     view('message', $data);
+        // }
     }
     public function post()
     {
